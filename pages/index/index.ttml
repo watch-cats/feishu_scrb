@@ -1,0 +1,86 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section-one">
+      <view class="date">
+        <view class="date-title">
+          日期：
+        </view>
+        <view class="date-select">
+          <picker mode="date" value="{{date}}" start="2020-12-01" end="2022-12-01" bindchange="bindDateChange" fields="day">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="shift">
+        <view class="shift-title">
+          班次：
+        </view>
+        <view class="shift-select">
+          <radio-group name="radio">
+            <label><radio value="radio1"/>白班</label>
+            <label><radio value="radio2"/>晚班</label>
+          </radio-group>        
+        </view>
+      </view>
+    </view>
+    <view class="page-section-two">
+      <view class="page-section-two-title">原粮领用1</view>
+        <view class="page-cells">
+          <view class="weui-cells__title">原料名称</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+              <picker value="{{index}}" range="{{array}}" bindchange="bindPickerChange" bindcancel="bindPickerCancel">
+                <view class="picker weui-input input-width">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">来源仓位</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="输入来源仓位" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">投料仓位</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="输入投料仓位" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">投入(KG)</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入投入重量" focus="{{focus}}" />
+          </view>
+          </view>
+        <view class="page-cells">
+          <view class="buttons">
+            <!-- <button class="mini-btn" type="default" size="mini">新增原粮领用</button> -->
+            <button type="default">新增原粮领用</button>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">投入合计(KG)</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="合计数" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="buttons">
+            <button type="primary">提交</button>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>

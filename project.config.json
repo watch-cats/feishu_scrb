@@ -1,0 +1,11 @@
+{
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true
+    },
+    "appid": "cli_a0911da12478d00b",
+    "projectname": "生产日报"
+}
