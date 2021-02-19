@@ -26,7 +26,7 @@
       </view>
     </view>
     <view class="page-section-two">
-      <view class="page-section-two-title">原粮领用1</view>
+      <view class="page-section-two-title">一、原粮领用</view>
         <view class="page-cells">
           <view class="weui-cells__title">原料名称</view>
           <view class="weui-cells weui-cells_after-title">
@@ -72,8 +72,115 @@
           <view class="weui-cells__title">投入合计(KG)</view>
           <view class="weui-cells weui-cells_after-title">
            <view class="weui-cell weui-cell_input">
-            <input class="weui-input input-width" placeholder="合计数" focus="{{focus}}" />
+            <input class="weui-input input-width" placeholder="合计数（自动算出）" focus="{{focus}}" />
           </view>
+          </view>
+        </view>
+    </view>
+    <view class="page-section-two-title">二、产成品信息</view>
+        <view class="page-cells">
+          <view class="weui-cells__title">条码简称</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="输入条码简称" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">包装形式</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+              <picker value="{{index}}" range="{{array}}" bindchange="bindPickerChange" bindcancel="bindPickerCancel">
+                <view class="picker weui-input input-width">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">产品编码</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="由条码简称带出" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">产品名称</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" placeholder="由条码简称带出" focus="{{focus}}" />
+          </view>
+          </view>
+        </view>
+        <view class="page-cells">
+          <view class="weui-cells__title">重量（公斤）</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入重量" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">包材编码</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="由条码简称带出" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">包材名称</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="由条码简称带出" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">领用数量</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入领用数量" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">使用数量</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入使用数量" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">破损数量</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入破损数量" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">退回数量</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="输入退回数量" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+                  <view class="page-cells">
+          <view class="weui-cells__title">破损率</view>
+          <view class="weui-cells weui-cells_after-title">
+           <view class="weui-cell weui-cell_input">
+            <input class="weui-input input-width" type="number" placeholder="公式计算得出" focus="{{focus}}" />
+          </view>
+          </view>
+          </view>
+        <view class="page-cells">
+          <view class="buttons">
+            <button type="default">新增产成品信息</button>
           </view>
         </view>
         <view class="page-cells">
