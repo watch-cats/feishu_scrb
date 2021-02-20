@@ -92,9 +92,9 @@
 				<view class="weui-cells__title">包装形式</view>
 				<view class="weui-cells weui-cells_after-title">
 					<view class="weui-cell weui-cell_input">
-						<picker value="{{index}}" range="{{array}}" bindchange="bindPickerChange" bindcancel="bindPickerCancel">
+						<picker value="{{index_bzxs}}" range="{{array_bzxs}}" bindchange="bindPickerChange" bindcancel="bindPickerCancel">
 							<view class="picker weui-input input-width">
-								{{array[index]}}
+								{{array_bzxs[index_bzxs]}}
 							</view>
 						</picker>
 					</view>
