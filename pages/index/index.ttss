@@ -2,11 +2,11 @@
   padding-top: 20rpx;
   font-size: 17px;
 }
-.date-title, .date-select {
+.date-title, 
+.date-select,
+.shift-title,
+.shift-select {
   display: inline-block;
-}
-.shift-title, .shift-select {
-    display: inline-block;
 }
 .shift-title {
     padding-top: 20rpx;
@@ -23,6 +23,9 @@
 .page-section-two-title {
     padding-top: 20rpx;
     font-size: 36rpx;
+}
+.title-width {
+  width: 30%;
 }
 /*!
  * weui.js v1.1.0 (https://github.com/weui/weui-ttss)
