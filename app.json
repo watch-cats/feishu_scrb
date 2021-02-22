@@ -1,11 +1,33 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "生产日报",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3370FF",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "新建",
+        "iconPath": "icon/new.png",
+        "selectedIconPath": "/icon/_new.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "查询",
+        "iconPath": "icon/search.png",
+        "selectedIconPath": "/icon/_search.png"
+      }
+    ]
   }
 }
