@@ -27,6 +27,9 @@
 .title-width {
   width: 30%;
 }
+.new_page {
+  border-top: 2px solid #D9D9D9;
+}
 /*!
  * weui.js v1.1.0 (https://github.com/weui/weui-ttss)
  * Copyright 2016, wechat ui team

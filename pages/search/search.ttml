@@ -1,0 +1,40 @@
+<!-- <block wx:for="{{lists}}" wx:key="{{index}}">
+	<input class='create-li' data-id="{{index}}" value='{{lists[index][0]}}' placeholder="选项1" bindinput='bindKeyInput' />
+	<input class='create-li' data-id="{{index}}" value='{{lists[index][1]}}' placeholder="选项2" bindinput='bindKeyInput2' />
+</block>
+<button class='add-li' bindtap='addList'>添加选项</button>
+<button class='add-li' bindtap='delList'>删除选项</button> -->
+<view class="page-section-one">
+	<view class="date">
+		<view class="weui-cells__title">日期：</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_input">
+				<picker mode="date" value="{{date}}" start="2020-12-01" end="2022-12-01" bindchange="bindDateChange" fields="day">
+					<view class="picker weui-input input-width">
+						{{date}}
+					</view>
+			</view>
+			</picker>
+		</view>
+	</view>
+	<view class="shift">
+		<view class="weui-cells__title">班次：</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell weui-cell_input">
+				<view class="picker weui-input input-width">
+					<radio-group name="radio">
+						<label>
+							<radio value="radio1" />
+							白班
+						</label>
+						<label>
+							<radio value="radio2" />
+							晚班
+						</label>
+					</radio-group>
+				</view>
+			</view>
+		</view>
+	</view>
+	<button type="primary">查询生产日报</button>
+</view>

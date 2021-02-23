@@ -1,7 +1,7 @@
-const app = getApp()
+var app = getApp()
 Page({
-	data: {
-		date: '2021-01-01',
+    data: {
+        date: '2021-01-01',
 		array_ylmc: ['圆粒', '普长', '细长', '圆粒毛米', '普长毛米', '细长毛米'],
 		index_ylmc: 0,
 		objectArray: [
@@ -94,8 +94,67 @@ Page({
 				en: "暂存毛米"
 			},
 		],
-	},
-	bindDateChange: function (e) {
+        hiddenmodalput: true,
+        lists: [],
+		lists2: [],
+        text: "",
+        //可以通过hidden是否掩藏弹出框的属性，来指定那个弹出框
+    },
+    addList: function () {
+        var lists = this.data.lists;
+        var newData = {};
+        lists.push(newData);//实质是添加lists数组内容，使for循环多一次
+        this.setData({
+            lists: lists,
+        })
+    },
+    delList: function () {
+        var lists = this.data.lists;
+        lists.pop(); //实质是删除lists数组内容，使for循环少一次
+        this.setData({
+            lists: lists,
+        })
+    },
+	addList2: function () {
+        var lists2 = this.data.lists2;
+        var newData = {};
+        lists2.push(newData);//实质是添加lists数组内容，使for循环多一次
+        this.setData({
+            lists2: lists2,
+        })
+    },
+    delList2: function () {
+        var lists2 = this.data.lists2;
+        lists2.pop(); //实质是删除lists数组内容，使for循环少一次
+        this.setData({
+            lists2: lists2,
+        })
+    },
+    bindKeyInput: function (e) {
+        var that = this;
+        var index = e.currentTarget.dataset.id;//使用event.currentTarget.dataset.XX获取内容
+        that.setData({
+            text: e.detail.value
+        })
+        that.data.lists[index][0] = that.data.text;
+        console.log("index1", index);
+        console.log("e", e.detail.value);
+        console.log("text", that.data.text);
+        console.log("value1", that.data.lists[index][0]);
+    },
+    bindKeyInput2: function (e) {
+        var that = this;
+        var index2 = e.currentTarget.dataset.id;//使用event.currentTarget.dataset.XX获取内容
+        that.setData({
+            text: e.detail.value
+        })
+        that.data.lists[index2][1] = that.data.text;
+        console.log("index2", index2);
+        console.log("e2", e.detail.value);
+        console.log("text", that.data.text);
+        console.log("value2", that.data.lists[index2][1]);
+    },
+    bindDateChange: function (e) {
 		console.log('picker发送选择改变，携带值为', e.detail.value)
 		this.setData({
 			date: e.detail.value
