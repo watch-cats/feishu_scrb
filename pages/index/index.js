@@ -87,6 +87,7 @@ Page({
 		lists2: [],
         text: "",
         //可以通过hidden是否掩藏弹出框的属性，来指定那个弹出框
+		sum_fcpd: 0,
     },
     addList: function () {
         var lists = this.data.lists;
@@ -158,6 +159,19 @@ Page({
 		console.log('picker发送选择改变，携带值为', e.detail.value)
 		this.setData({
 			index_bzxs: e.detail.value
+		})
+	},
+	// 获取副产品袋数
+	bindinput_fcpd75: function (e) {
+		console.log('副产品袋75值为', e.detail.value)
+		this.setData({
+			fcpd75: parseFloat(e.detail.value)//parseFloat转为浮点数
+		})
+	},
+	bindinput_fcpd50: function (e) {
+		console.log('副产品袋50值为', e.detail.value)
+		this.setData({
+			fcpd50: parseFloat(e.detail.value),
 		})
 	},
 })

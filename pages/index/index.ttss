@@ -21,14 +21,16 @@
     background-color: #fff;
 }
 .page-section-two-title {
-    padding-top: 20rpx;
-    font-size: 36rpx;
+  color: #1f2329;
+  text-align: center;
+  padding-top: 20rpx;
+  font-size: 36rpx;
 }
 .title-width {
   width: 30%;
 }
 .new_page {
-  border-top: 2px solid #D9D9D9;
+  border-top: 2px solid #bbbfc4;
 }
 /*!
  * weui.js v1.1.0 (https://github.com/weui/weui-ttss)
